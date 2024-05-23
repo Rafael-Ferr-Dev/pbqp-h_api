@@ -22,9 +22,10 @@ public class EmailController {
             String to = "rafaelferreiradorf@gmail.com";
             String subject = "New Message from " + emailModel.getName();
             String text = String.format(
-                    "Name: %s\nMessage: %s\nEmpresa: %s\nSegmento: %s\nTelefone Celular: %s\nTelefone Fixo: %s\nCEP: %s\nCidade: %s\nEstado: %s\nEmail: %s",
+                    "Name: %s\nMessage: %s\nOrigem: %s\nEmpresa: %s\nSegmento: %s\nTelefone Celular: %s\nTelefone Fixo: %s\nCEP: %s\nCidade: %s\nEstado: %s\nEmail: %s",
                     emailModel.getName(),
                     emailModel.getMessage(),
+                    emailModel.getOrigem(),
                     emailModel.getEmpresa(),
                     emailModel.getSegmento(),
                     emailModel.getTelefone_celular(),

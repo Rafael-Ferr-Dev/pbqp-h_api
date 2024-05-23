@@ -3,6 +3,7 @@ package com.example.pbqph_api.models;
 public class EmailModel {
     private String name;
     private String message;
+    private String origem;
     private String empresa;
     private String segmento;
     private String telefone_celular;
@@ -27,6 +28,14 @@ public class EmailModel {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getOrigem() {
+        return origem;
+    }
+
+    public void setOrigem(String origem) {
+        this.origem = origem;
     }
 
     public String getEmpresa() {
