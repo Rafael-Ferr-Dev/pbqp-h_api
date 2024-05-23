@@ -22,10 +22,9 @@ public class EmailController {
             String to = "contatosite@portalpbqp-h.com.br";
             String subject = "New Message from " + emailModel.getName();
             String text = String.format(
-                    "Name: %s\nMessage: %s\nOrigem: %s\nEmpresa: %s\nSegmento: %s\nTelefone Celular: %s\nTelefone Fixo: %s\nCEP: %s\nCidade: %s\nEstado: %s\nEmail: %s",
-                    emailModel.getName(),
-                    emailModel.getMessage(),
+                    "Origem: %s\nName: %s\nEmpresa: %s\nSegmento: %s\nTelefone Celular: %s\nTelefone Fixo: %s\nCEP: %s\nCidade: %s\nEstado: %s\nEmail: %s\nMessage: %s",
                     emailModel.getOrigem(),
+                    emailModel.getName(),
                     emailModel.getEmpresa(),
                     emailModel.getSegmento(),
                     emailModel.getTelefone_celular(),
@@ -33,7 +32,8 @@ public class EmailController {
                     emailModel.getCep(),
                     emailModel.getCidade(),
                     emailModel.getEstado(),
-                    emailModel.getEmail()
+                    emailModel.getEmail(),
+                    emailModel.getMessage()
             );
             emailService.sendEmail(to, subject, text);
             return "Email sent successfully!";
