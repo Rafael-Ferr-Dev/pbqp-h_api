@@ -19,7 +19,7 @@ public class EmailController {
     @PostMapping("/send")
     public String sendEmail(@RequestBody EmailModel emailModel) {
         try {
-            String to = "rafaelferreiradorf@gmail.com";
+            String to = "contatosite@portalpbqp-h.com.br";
             String subject = "New Message from " + emailModel.getName();
             String text = String.format(
                     "Name: %s\nMessage: %s\nOrigem: %s\nEmpresa: %s\nSegmento: %s\nTelefone Celular: %s\nTelefone Fixo: %s\nCEP: %s\nCidade: %s\nEstado: %s\nEmail: %s",

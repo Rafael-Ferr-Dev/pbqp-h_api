@@ -18,7 +18,7 @@ public class EmailService {
     public void sendEmail(String to, String subject, String text) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
-            message.setFrom("luffywindhead@outlook.com");  // Definir o remetente corretamente
+            message.setFrom("enviocontatosite@portalpbqp-h.com.br");  // Definir o remetente corretamente
             message.setTo(to);
             message.setSubject(subject);
             message.setText(text);
