@@ -16,6 +16,7 @@ public class EmailController {
     @Autowired
     private EmailService emailService;
 
+    @CrossOrigin(origins = "http://127.0.0.1:5500")
     @PostMapping("/send")
     public String sendEmail(@RequestBody EmailModel emailModel) {
         try {
