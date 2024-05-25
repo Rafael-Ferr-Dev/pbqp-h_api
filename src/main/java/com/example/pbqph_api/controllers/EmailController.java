@@ -16,12 +16,12 @@ public class EmailController {
     @Autowired
     private EmailService emailService;
 
-    @CrossOrigin(origins = "http://127.0.0.1:5500")
+    @CrossOrigin(origins = {"http://127.0.0.1:5500", "https://portalpbqp-h.com.br"})
     @PostMapping("/send")
     public String sendEmail(@RequestBody EmailModel emailModel) {
         try {
             String to = "contatosite@portalpbqp-h.com.br";
-            String subject = "New Message from " + emailModel.getName();
+            String subject = "Origem: " + emailModel.getOrigem();
             String text = String.format(
                     "Origem: %s\nName: %s\nEmpresa: %s\nSegmento: %s\nTelefone Celular: %s\nTelefone Fixo: %s\nCEP: %s\nCidade: %s\nEstado: %s\nEmail: %s\nMessage: %s",
                     emailModel.getOrigem(),
